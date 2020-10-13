@@ -7,7 +7,7 @@ int main(void)
 	printf("请输入实数c:");scanf("%f",&c);
 	if (a==b && a==c)
 		printf("1\n");
-	else if(a==b || a==c)
+	else if(a==b || a==c || b==c)
 		printf("2\n");
 	else if (a+b>c && a+c>b && b+c>a )
 		printf("3\n");
