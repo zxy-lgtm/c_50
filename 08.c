@@ -2,7 +2,7 @@
 int main(void)
 {
     int i,j,n;
-    int aver;
+    double aver;
     while(scanf("%d",&n)!=EOF)
     {
         int sum = 0;
