@@ -12,10 +12,17 @@ int char_b(int i)
 }
 int main(void)
 {
-	char_a(5);
-	char_b(1),char_a(3);
-	char_b(2),char_a(1);
-	char_b(1),char_a(3);
-	char_a(5);
+	int i=0;
+	int j=7;
+	for(i=0;i<3;i++)
+	{
+		j-=2;
+		char_b(i);char_a(j);	
+	}
+	for(i=1;i>=0;i--)
+	{
+		j+=2;//printf("%d%d",j,i);
+		char_b(i);char_a(j);
+	}
 	return 0;
 }
