@@ -1,7 +1,7 @@
 #include<stdio.h>
 
-int prime_number(int n) 
-{
+int prime_number(int n) {
+    
     int count = 0;
 
     for (int i = 2; i < n; i++) {
@@ -17,8 +17,8 @@ int prime_number(int n)
     }
 }
 
-int main () 
-{
+int main () {
+
     int a, b;
     int min, max;
 
@@ -31,9 +31,9 @@ int main ()
     min = a;
     max = a;
     if (min < b)
-    max = b;
+        max = b;
     else
-    min = b;
+        min = b;
 
     //自己定义一个足够长的素数数组.
     int c[10000] = {0};
