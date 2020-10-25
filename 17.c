@@ -46,12 +46,19 @@ int main ()
         }    
     }
 
+    //定义一个换行工具人
+    int u = 0;
+
     for (int i = 0; i < max ; i++) {
         if (i >= min) {
             printf("%d ", c[i]);
+            u ++;
+        }
+        if (u % 10 == 0) {
+            printf("\n");
         }
     }
-
+    
     return 0;
 
 }
