@@ -6,10 +6,10 @@ int main () {
     int sum[10] = {0};
 
     printf("输入你的数吧");
-    scanf("%d", &ch);
+    // scanf("%d", &ch);
 
     while ((ch = getchar()) != '\n') {
-        if (ch >= '0' && ch >= '9') {
+        if (ch >= '0' && ch <= '9') {
             sum[ch - '0'] ++;
         }
     }
