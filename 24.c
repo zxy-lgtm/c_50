@@ -1,19 +1,35 @@
 #include<stdio.h>
+#include<string.h>
 
 int main () {
 
-    int ch;
-    int sum = 0;
+    char ch;
+    int t_sum = 0;
+    int sum[10] = {0};
     int num[3] = {0};
+    int count = 1;
 
-    while (ch = getchar() != '\n') {
-        sum += ch;
+    scanf("%s", ch);
+    
+    while ((ch = getchar()) != '\n')
+    {
+        if (ch >= '0' && ch <= '9') {
+            sum[ch - '0'] += (ch - '0');
+            count ++;
+        }
     }
 
+    for (int i = 0; i < count; i++ ) {
+        t_sum += sum[i];
+
+    }
+
+    
+
     //因为自然数小于十的一百次方,那么最多有一百位,最大和为900,所以三个就行
-    num[1] = sum / 100;
-    num[2] = (sum % 100) / 10;
-    num[3] = (sum % 100) % 10;
+    num[1] = t_sum / 100;
+    num[2] = (t_sum % 100) / 10;
+    num[3] = (t_sum % 100) % 10;
     
 
     for (int i = 1; i < 4; i++) {
