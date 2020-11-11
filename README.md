@@ -1,1 +1,1 @@
-# c_50
+# my study about c and go
