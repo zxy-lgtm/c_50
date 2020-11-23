@@ -61,7 +61,7 @@ func isPalindrome3(x int) bool {
 }
 
 //官方题解,反转一半数字,这样就不用考虑整数溢出的情况
-func isPalindrome(x int) bool {
+func isPalindrome4(x int) bool {
 	// 特殊情况：
 	// 如上所述，当 x < 0 时，x 不是回文数。
 	// 同样地，如果数字的最后一位是 0，为了使该数字为回文，
@@ -86,5 +86,5 @@ func isPalindrome(x int) bool {
 func main() {
 	//第一次提交没有通过的数字
 	x := 100021
-	fmt.Println(isPalindrome(x), isPalindrome2(x), isPalindrome3(x))
+	fmt.Println(isPalindrome(x), isPalindrome2(x), isPalindrome3(x), isPalindrome4(x))
 }
