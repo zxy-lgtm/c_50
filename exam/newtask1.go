@@ -8,9 +8,11 @@ func Repalce(s string, target, replace byte) string {
 	if len(slice) == 0 {
 		return ""
 	}
-	for i := 0; i < len(s)-1; i++ {
-		if slice[i] == target {
+	for i, value := range slice {
+		//fmt.Println(value)
+		if value == target {
 			slice[i] = replace
+			//fmt.Println("!!!")
 		}
 	}
 	//因为规定了返回值是string类型,所以要进行一次转换
@@ -19,7 +21,7 @@ func Repalce(s string, target, replace byte) string {
 }
 
 func main() {
-	s := "You are interesting ,but they are boring."
+	s := "You are interesting."
 	s = Repalce(s, 'i', 'e')
 	s1 := ""
 	s1 = Repalce(s1, 'i', 'e')
