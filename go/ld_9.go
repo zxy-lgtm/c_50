@@ -15,7 +15,7 @@ func isPalindrome(x int) bool {
 		//测试需要fmt.Println(slice)
 		end := len(slice) - 1
 		head := 0
-		for end != head && end >= 0 {
+		for end != head && end >= head {
 			//测试需要fmt.Println(slice[end], slice[head])
 			if slice[head] != slice[end] {
 				return false
@@ -33,7 +33,8 @@ func isPalindrome2(x int) bool {
 	if x < 0 {
 		return false
 	}
-	for i := range str {
+	for i, _ := range str {
+		//fmt.Println(i)
 		if str[len(str)-1-i] != str[i] {
 			return false
 		}
