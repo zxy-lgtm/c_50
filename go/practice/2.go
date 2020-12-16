@@ -1,28 +1,43 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 
-	var score1, score2, tool int
+	mymap := make(map[int]string)
+	mymap[0] = "ling"
+	mymap[1] = "yi"
+	mymap[2] = "er"
+	mymap[3] = "san"
+	mymap[4] = "si"
+	mymap[5] = "wu"
+	mymap[6] = "liu"
+	mymap[7] = "qi"
+	mymap[8] = "ba"
+	mymap[9] = "jiu"
 
-	fmt.Scanf("%d %d", &score1, &score2)
-
-	if score1 < 0 || score1 > 100 || score2 < 0 || score2 > 100 {
-		tool = 0
-	} else if score1 >= 60 && score2 >= 60 {
-		tool = 1
-	} else if score1 < 60 || score2 < 60 {
-		tool = 2
+	var n string
+	sum := 0
+	fmt.Scan(&n)
+	//fmt.Println(n)
+	str := n[:]
+	for _, ok := range str {
+		//fmt.Println(key, (ok - '0'))
+		numer := int(ok - '0')
+		sum += numer
+		//fmt.Println(sum)
 	}
 
-	switch tool {
-	case 0:
-		fmt.Println("it is error.")
-	case 1:
-		fmt.Println("it is pass.")
-	case 2:
-		fmt.Println("it is not pass.")
+	newSum := strconv.Itoa(sum)
+	for key, ok := range newSum[:] {
+		number := int(ok - '0')
+		if key == 0 {
+			fmt.Printf("%s", mymap[number])
+		} else {
+			fmt.Printf(" %s", mymap[number])
+		}
 	}
-
 }
